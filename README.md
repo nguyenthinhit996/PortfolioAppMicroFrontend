@@ -1,7 +1,10 @@
- 
+Here's the modified README with Vite instead of Webpack for the micro frontend architecture:
+
+---
+
 # Micro Frontend Blog Platform
 
-This is a blog platform built with a **micro frontend** architecture using **Webpack Module Federation**, **React**, and **Material UI (MUI)**. The platform consists of multiple micro frontends (remote apps) that are integrated into a single host app, allowing independent development and deployment.
+This is a blog platform built with a **micro frontend** architecture using **Vite**, **React**, and **Material UI (MUI)**. The platform consists of multiple micro frontends (remote apps) that are integrated into a single host app, allowing independent development and deployment.
 
 ### **Project Structure**
 
@@ -11,27 +14,27 @@ This is a blog platform built with a **micro frontend** architecture using **Web
     /components
       App.js
     /index.js
-  webpack.config.js
+  vite.config.js
 
 /user-profile (Remote app 1)
   /src
     /UserProfile.js
-  webpack.config.js
+  vite.config.js
 
 /blog-dashboard (Remote app 2)
   /src
     /BlogDashboard.js
-  webpack.config.js
+  vite.config.js
 
 /blog-feed (Remote app 3)
   /src
     /BlogFeed.js
-  webpack.config.js
+  vite.config.js
 
 /commenting-system (Remote app 4)
   /src
     /CommentingSystem.js
-  webpack.config.js
+  vite.config.js
 
 /shared-ui-components (Shared UI components repo)
   /src
@@ -48,7 +51,7 @@ This is a blog platform built with a **micro frontend** architecture using **Web
 - **Frontend**: 
   - **React.js** for building the UI.
   - **Material UI (MUI)** for pre-built components.
-  - **Webpack Module Federation** for sharing components and code across different micro frontends.
+  - **Vite** for faster builds and module federation through plugin configuration.
   - **React Router** for navigation between different parts of the app.
 
 - **Backend (optional)**: 
@@ -128,19 +131,19 @@ To run this project locally, you need to have **Node.js** and **npm** installed 
    ```bash
    # Start the user-profile remote app
    cd user-profile
-   npm run start
+   npm run dev
 
    # Start the blog-dashboard remote app
    cd ../blog-dashboard
-   npm run start
+   npm run dev
 
    # Start the blog-feed remote app
    cd ../blog-feed
-   npm run start
+   npm run dev
 
    # Start the commenting-system remote app
    cd ../commenting-system
-   npm run start
+   npm run dev
    ```
 
    - Each remote app will run on a different port:
@@ -155,7 +158,7 @@ To run this project locally, you need to have **Node.js** and **npm** installed 
    ```bash
    # Start the host app
    cd host-app
-   npm run start
+   npm run dev
    ```
 
    The host app will run on `http://localhost:3000`.
@@ -173,7 +176,7 @@ To run this project locally, you need to have **Node.js** and **npm** installed 
    - These components are imported and used across the remote apps to ensure consistency and avoid code duplication.
 
 3. **Module Federation**:
-   - The `ModuleFederationPlugin` in Webpack is used to expose components from remote apps and dynamically load them in the host app.
+   - Vite provides an easy-to-setup plugin for module federation to share components from remote apps and dynamically load them in the host app.
 
 4. **UI Design**:
    - Material UI (MUI) is used for consistent, pre-built UI components across the project. You can customize the MUI components according to the project’s design requirements.
@@ -233,4 +236,4 @@ For any questions, feel free to open an issue or contact the maintainers at [ngu
 
 ---
 
-Let me know if you'd like any additional sections added, such as setup for deployment, CI/CD configuration, or specific details about each micro frontend's responsibilities!
+Let me know if you need any further adjustments!
