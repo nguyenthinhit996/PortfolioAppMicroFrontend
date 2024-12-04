@@ -229,7 +229,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### **Contact**
 
-For any questions, feel free to open an issue or contact the maintainers at [your.email@example.com].
+For any questions, feel free to open an issue or contact the maintainers at [nguyenthinhit996@gmail.com].
 
 ---
 
