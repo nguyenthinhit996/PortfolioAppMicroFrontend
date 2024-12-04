@@ -1,7 +1,4 @@
-Here’s a sample **README.md** file for your **Micro Frontend Blog Platform** project using **Webpack Module Federation**, **React**, and **Material UI (MUI)**:
-
----
-
+ 
 # Micro Frontend Blog Platform
 
 This is a blog platform built with a **micro frontend** architecture using **Webpack Module Federation**, **React**, and **Material UI (MUI)**. The platform consists of multiple micro frontends (remote apps) that are integrated into a single host app, allowing independent development and deployment.
